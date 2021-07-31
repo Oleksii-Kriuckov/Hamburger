@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/Hamburger.css">
+    <title>Hamburger</title>
+</head>
+
+<body>
+    <h1>Hamburger</h1>
+
+    <main>
+        <img src="https://i.ibb.co/s35tyxf/realistic-hamburger-layers-infographics-1284-36000.jpg" alt="Hamburger">
+        <div class="param">
+            <div class="size"> Size
+                <label for="small">small</label>
+                <input type="radio" name="size" id="size_small" value="small">
+                <label for="large">large</label>
+                <input type="radio" name="size" id="size_large" value="large">
+            </div>
+            <div class="ingredients">
+                <div class="stuffing"> 
+                    <label for="stuffing_cheese">cheese</label>
+                    <input type="radio" name="stuffing_" id="stuffing_cheese" value="cheese">
+
+                    <label for="stuffing_potato">potato</label>
+                    <input type="radio" name="stuffing" id="stuffing_potato" value="potato">
+
+                    <label for="stuffing_salad">salad</label>
+                    <input type="radio" name="stuffing" id="stuffing_salad" value="salad">
+                </div>
+
+                <div class="topping">
+                    <label for="topping_mayo">Mayo</label>
+                    <input type="checkbox" name="topping" id="topping_mayo">
+                    
+                    <label for="topping_spice">Spice</label>
+                    <input type="checkbox" name="topping" id="topping_spice">
+                </div>
+
+            </div>
+
+            <div>
+                <p>price</p>
+                <p class="price"></p>
+                <hr>
+                <p>calories</p>
+                <p class="calories"></p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./JS/Hamburger.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+body {
+    background-color: lightcoral;
+}
+h1 {
+    text-align: center;
+    text-emphasis: inherit;
+}
+
+img {
+    float: left;
+    margin-right: 20px;
+}
+
+.param {
+    margin-left: auto;
+    display: grid;
+}
+.ingredients{
+    width: 500px;
+    display: grid;
+}
