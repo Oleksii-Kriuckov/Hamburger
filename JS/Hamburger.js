@@ -9,7 +9,7 @@ function Hamburger(size, stuffing) {
         if (size.paramType != "Size" || stuffing.paramType != "Stuffing") {
             throw new HamburgerException('UncorectedParameters', "invalid size or stuffing");
         }
-
+        
         this.size = size;
         this.stuffing = stuffing;
     } catch (err) {
@@ -38,10 +38,12 @@ Hamburger.TOPPING_SPICE.added = false;
 
 
 Hamburger.prototype.addTopping = function (topping) {
-
+    
     try {
         if (!topping) {
             throw new HamburgerException('MissingData', "no topping given");
+        } else if (topping.type != "Topping") {
+            throw new HamburgerException('UncorectedParameters', "invalid topping");
         }
         if (topping.added === true) {
             throw new HamburgerException('DuplicateTopping', `Topping ${topping.paramName} has been already added`)
@@ -54,7 +56,7 @@ Hamburger.prototype.addTopping = function (topping) {
             this.toppingSpice = topping;
             topping.added = true;
         }
-
+        
     } catch (err) {
         alert(err.name + ": " + err.message);
     }
@@ -65,6 +67,8 @@ Hamburger.prototype.removeTopping = function (topping) {
     try {
         if (!topping) {
             throw new HamburgerException('MissingData', "no topping given");
+        } else if (topping.type != "Topping") {
+            throw new HamburgerException('UncorectedParameters', "invalid topping");
         }
         if (topping.added === false) {
             throw new HamburgerException('MissingTopping', `Topping ${topping.paramName} was not added`)
@@ -153,6 +157,7 @@ hamburger.addTopping(Hamburger.TOPPING_MAYO)
 console.log("All topping: " + hamburger.getToppings().join(", "))
 
 hamburger.removeTopping()
+hamburger.removeTopping(Hamburger.TOPPING_MAYO)
 hamburger.removeTopping(Hamburger.TOPPING_MAYO)
 hamburger.removeTopping(Hamburger.TOPPING_MAYO)
 console.log("price: " + hamburger.calculatePrice())
