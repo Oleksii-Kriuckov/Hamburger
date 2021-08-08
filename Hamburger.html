@@ -11,47 +11,77 @@
 
 <body>
     <h1>Hamburger</h1>
-
+    
     <main>
-        <img src="https://i.ibb.co/s35tyxf/realistic-hamburger-layers-infographics-1284-36000.jpg" alt="Hamburger">
-        <div class="param">
-            <div class="size"> Size
-                <label for="small">small</label>
+        <img src="./Image/images.jpg" alt="Hamburger">
+        
+        <div class="menu">
+            <div>Menu</div>
+            <div></div>
+            <div>Size</div>
+            <div>Stuffing</div>
+            <div>Topping</div>
+            <div>Small
                 <input type="radio" name="size" id="size_small" value="small">
-                <label for="large">large</label>
+            </div>
+            <div>Large
                 <input type="radio" name="size" id="size_large" value="large">
             </div>
-            <div class="ingredients">
-                <div class="stuffing"> 
-                    <label for="stuffing_cheese">cheese</label>
-                    <input type="radio" name="stuffing_" id="stuffing_cheese" value="cheese">
-
-                    <label for="stuffing_potato">potato</label>
-                    <input type="radio" name="stuffing" id="stuffing_potato" value="potato">
-
-                    <label for="stuffing_salad">salad</label>
-                    <input type="radio" name="stuffing" id="stuffing_salad" value="salad">
-                </div>
-
-                <div class="topping">
-                    <label for="topping_mayo">Mayo</label>
-                    <input type="checkbox" name="topping" id="topping_mayo">
-                    
-                    <label for="topping_spice">Spice</label>
-                    <input type="checkbox" name="topping" id="topping_spice">
-                </div>
-
+            <div>Cheese
+                <input type="radio" name="stuffing" id="stuffing_cheese" value="cheese">
             </div>
-
-            <div>
-                <p>price</p>
-                <p class="price"></p>
-                <hr>
-                <p>calories</p>
-                <p class="calories"></p>
+            <div>Potato
+                <input type="radio" name="stuffing" id="stuffing_potato" value="potato">
             </div>
+            <div>Salad
+                <input type="radio" name="stuffing" id="stuffing_salad" value="salad">
+            </div>
+            <div>Mayo
+                <input type="checkbox" name="topping" id="topping_mayo">
+            </div>
+            <div>Spice
+                <input type="checkbox" name="topping" id="topping_spice">
+            </div>
+            <div>Price</div>
+            <div>50</div>
+            <div>100</div>
+            <div>10</div>
+            <div>15</div>
+            <div>20</div>
+            <div>20</div>
+            <div>15</div>
+            <div>Calories</div>
+            <div>20</div>
+            <div>40</div>
+            <div>20</div>
+            <div>10</div>
+            <div>5</div>
+            <div>5</div>
+            <div>0</div>
         </div>
 
+        <h2>Choose your hamburger</h2>
+        <div class="param">
+            <div>
+                <button id="calculate">Calculate price and calories</button>
+                <p>price: <span class="price"></span></p>
+                
+                <p>calories: <span class="calories"></span></p>
+            </div>
+            
+            <div>
+                <button id="all_toppings">Get all toppings</button>
+                <p>All toppings: <span class="toppings"></span></p> 
+            </div>
+            <div>
+                <button id="get_size">Get size</button>
+                <p>All toppings: <span class="size"></span></p> 
+            </div>
+            <div>
+                <button id="get_stuffing">Get stuffing</button>
+                <p>All toppings: <span class="stuffing"></span></p> 
+            </div>
+        </div>
     </main>
 
     <script src="./JS/Hamburger.js"></script>
